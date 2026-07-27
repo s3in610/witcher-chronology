@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nawigator po Literatura A. Sapkowskiego</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nawigator po Świecie Wiedźmina</h1>
+        <p>Interaktywna wyszukiwarka chronologii, postaci, wydarzeń i lokalizacji</p>
+    </header>
+
+    <main class="container">
+        <!-- Panel Wyszukiwania i Filtrów -->
+        <section class="search-panel card">
+            <h2>Wyszukaj w Bazię Wiedźmińskiej</h2>
+            
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Wpisz szukaną frazę (np. Bonhart, Brokilon, pucz, miecz)...">
+            </div>
+
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="filter-character">Postać:</label>
+                    <select id="filter-character">
+                        <option value="">-- Wszystkie postacie --</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-location">Lokacja:</label>
+                    <select id="filter-location">
+                        <option value="">-- Wszystkie lokacje --</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filter-year">Rok (Uniwersum):</label>
+                    <select id="filter-year">
+                        <option value="">-- Cała chronologia --</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="search-stats">
+                Znaleziono wydarzeń: <span id="results-count">0</span>
+            </div>
+        </section>
+
+        <!-- Lista Wyników Wyszukiwania -->
+        <section id="results-list" class="results-grid">
+            <!-- Wyniki generowane dynamicznie przez app.js -->
+        </section>
+
+        <!-- Karta Szczegółów Wybranego Wydarzenia -->
+        <section id="event-details" class="card hidden">
+            <button id="close-details-btn" class="close-btn">&larr; Powrót do wyników</button>
+            <h2 id="event-title"></h2>
+            <div class="meta-info">
+                <span id="event-date" class="badge"></span>
+                <span id="event-book" class="badge secondary"></span>
+                <span id="event-location" class="badge outline"></span>
+            </div>
+            
+            <p id="event-description" class="event-desc"></p>
+
+            <div class="other-chars-section">
+                <strong>Inne obecne postacie:</strong> <span id="event-other-chars"></span>
+            </div>
+
+            <hr>
+
+            <h3>Gdzie aktualnie przebywają bohaterowie? (GPS)</h3>
+            <div class="tracker-grid">
+                <div class="tracker-card">
+                    <h4>Geralt z Rivi</h4>
+                    <p id="pos-geralt">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Ciri</h4>
+                    <p id="pos-ciri">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Yennefer</h4>
+                    <p id="pos-yennefer">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Triss Merigold</h4>
+                    <p id="pos-triss">-</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projekt open-source – Nawigator po twórczości Andrzeja Sapkowskiego.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
