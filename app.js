@@ -32,23 +32,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="grid-column: 1/-1; background-color: #331111; color: #ff9999; padding: 1.5rem; border-radius: 8px; border: 1px solid #ff4444;">
                     <h3>Nie udało się załadować bazy danych</h3>
                     <p><strong>Szczegóły błędu:</strong> ${err.message}</p>
-                    <p><em>Wskazówka: Jeśli otwierasz plik bezpośrednio z dysku (file:///...), użyj lokalnego serwera (np. Live Server w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
+                    <p><em>Wskazówka: Użyj lokalnego serwera (np. Live Server w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
                 </div>
             `;
         });
 
     // Inicjalizacja opcji w filtrach na podstawie danych z JSON
     function initFilters(events) {
-        const booksMap = new Map(); // Służy do powiązania książki z jej najwcześniejszym rokiem
+        const booksMap = new Map();
         const charactersSet = new Set();
         const locationsSet = new Set();
         const yearsSet = new Set();
 
-        // Główne postacie z trackerów
         ['Geralt', 'Ciri', 'Yennefer', 'Triss'].forEach(c => charactersSet.add(c));
 
         events.forEach(item => {
-            // Przypisanie najwcześniejszego roku do danej książki/opowiadania
             if (item.book && item.year) {
                 if (!booksMap.has(item.book) || item.year < booksMap.get(item.book)) {
                     booksMap.set(item.book, item.year);
@@ -62,10 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Sortowanie książek chronologicznie według lat w uniwersum
         const sortedBooks = Array.from(booksMap.entries()).sort((a, b) => a[1] - b[1]);
 
-        // Wypełnienie listy książek/opowiadań z podanymi datami
         sortedBooks.forEach(([bookTitle, minYear]) => {
             const opt = document.createElement('option');
             opt.value = bookTitle;
@@ -73,7 +69,6 @@ document.addEventListener('DOMContentLoaded', () => {
             filterBook.appendChild(opt);
         });
 
-        // Wypełnienie listy postaci
         Array.from(charactersSet).sort().forEach(char => {
             const opt = document.createElement('option');
             opt.value = char;
@@ -81,7 +76,6 @@ document.addEventListener('DOMContentLoaded', () => {
             filterCharacter.appendChild(opt);
         });
 
-        // Wypełnienie listy lokacji
         Array.from(locationsSet).sort().forEach(loc => {
             const opt = document.createElement('option');
             opt.value = loc;
@@ -89,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
             filterLocation.appendChild(opt);
         });
 
-        // Wypełnienie listy lat
         Array.from(yearsSet).sort((a, b) => a - b).forEach(year => {
             const opt = document.createElement('option');
             opt.value = year;
@@ -100,6 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Główna funkcja filtrowania
     function filterEvents() {
+        // NAPRAWA: Po zmianie jakiegokolwiek filtra zamykamy widok szczegółów i wracamy do listy wyników
+        eventDetails.classList.add('hidden');
+        resultsList.classList.remove('hidden');
+
         const query = searchInput.value.toLowerCase().trim();
         const selectedBook = filterBook.value;
         const selectedChar = filterCharacter.value;
@@ -107,7 +104,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const selectedYear = filterYear.value;
 
         const filtered = eventsData.filter(event => {
-            // Szukanie frazy w tekście
             const titleMatch = event.title ? event.title.toLowerCase().includes(query) : false;
             const descMatch = event.description ? event.description.toLowerCase().includes(query) : false;
             const bookMatch = event.book ? event.book.toLowerCase().includes(query) : false;
@@ -123,10 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const textMatch = !query || titleMatch || descMatch || bookMatch || locNameMatch || otherCharsMatch || trackerMatch;
 
-            // Filtr książki/opowiadania
             const bookFilterMatch = !selectedBook || event.book === selectedBook;
 
-            // Filtr postaci
             let charMatch = !selectedChar;
             if (selectedChar) {
                 const charLower = selectedChar.toLowerCase();
@@ -144,10 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 charMatch = inOthers || inTracker;
             }
 
-            // Filtr lokacji
             const locMatch = !selectedLoc || event.location_name === selectedLoc;
-
-            // Filtr roku
             const yearMatch = !selectedYear || (event.year && event.year.toString() === selectedYear);
 
             return textMatch && bookFilterMatch && charMatch && locMatch && yearMatch;
