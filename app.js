@@ -32,14 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="grid-column: 1/-1; background-color: #331111; color: #ff9999; padding: 1.5rem; border-radius: 8px; border: 1px solid #ff4444;">
                     <h3>Nie udało się załadować bazy danych</h3>
                     <p><strong>Szczegóły błędu:</strong> ${err.message}</p>
-                    <p><em>Wskazówka: Jeśli otwierasz plik bezpośrednio z dysku (file:///...), przeglądarka blokuje wczytywanie plików JSON ze względów bezpieczeństwa. Użyj lokalnego serwera (np. wtyczki Live Server w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
+                    <p><em>Wskazówka: Jeśli otwierasz plik bezpośrednio z dysku (file:///...), użyj lokalnego serwera (np. Live Server w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
                 </div>
             `;
         });
 
-    // Inicjalizacja opcji we wszystkich filtrach na podstawie danych z JSON
+    // Inicjalizacja opcji w filtrach na podstawie danych z JSON
     function initFilters(events) {
-        const booksSet = new Set();
+        const booksMap = new Map(); // Służy do powiązania książki z jej najwcześniejszym rokiem
         const charactersSet = new Set();
         const locationsSet = new Set();
         const yearsSet = new Set();
@@ -48,7 +48,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Geralt', 'Ciri', 'Yennefer', 'Triss'].forEach(c => charactersSet.add(c));
 
         events.forEach(item => {
-            if (item.book) booksSet.add(item.book);
+            // Przypisanie najwcześniejszego roku do danej książki/opowiadania
+            if (item.book && item.year) {
+                if (!booksMap.has(item.book) || item.year < booksMap.get(item.book)) {
+                    booksMap.set(item.book, item.year);
+                }
+            }
+
             if (item.year) yearsSet.add(item.year);
             if (item.location_name) locationsSet.add(item.location_name);
             if (item.other_characters && Array.isArray(item.other_characters)) {
@@ -56,11 +62,14 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Wypełnienie listy książek/opowiadań
-        Array.from(booksSet).sort().forEach(book => {
+        // Sortowanie książek chronologicznie według lat w uniwersum
+        const sortedBooks = Array.from(booksMap.entries()).sort((a, b) => a[1] - b[1]);
+
+        // Wypełnienie listy książek/opowiadań z podanymi datami
+        sortedBooks.forEach(([bookTitle, minYear]) => {
             const opt = document.createElement('option');
-            opt.value = book;
-            opt.textContent = book;
+            opt.value = bookTitle;
+            opt.textContent = `[${minYear} r.] ${bookTitle}`;
             filterBook.appendChild(opt);
         });
 
@@ -174,7 +183,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="badge secondary">${event.book || ''}</span>
                     </div>
                     <h3>${event.title || 'Bez tytułu'}</h3>
-                    <p class="result-loc">📖 <strong>${event.book || ''}</strong>${chapterInfo}</p>
+                    <p class="result-loc">📖 <strong>[${event.year || ''} r.] ${event.book || ''}</strong>${chapterInfo}</p>
                     <p class="result-loc">📍 <strong>${event.location_name || 'Różne lokacje'}</strong></p>
                     <p class="result-snippet">${descSnippet}</p>
                 </div>
@@ -193,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function showDetails(event) {
         document.getElementById('event-title').textContent = event.title || '';
         document.getElementById('event-date').textContent = `${event.month || ''} ${event.year || ''} r.`;
-        document.getElementById('event-book').textContent = `${event.book || ''} (${event.chapter || ''})`;
+        document.getElementById('event-book').textContent = `[${event.year || ''} r.] ${event.book || ''} (${event.chapter || ''})`;
         document.getElementById('event-location').textContent = event.location_name || 'Brak danych';
         document.getElementById('event-description').textContent = event.description || '';
 
