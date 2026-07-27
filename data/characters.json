@@ -1,0 +1,26 @@
+[
+  {
+    "id": "geralt",
+    "name": "Geralt z Rivi",
+    "role": "Wiedźmin, główny bohater",
+    "description": "Wiedźmin z cechu Wilka, wykonawca zleceń na potwory, związany przeznaczeniem z Ciri."
+  },
+  {
+    "id": "ciri",
+    "name": "Cirilla Fiona Elen Riannon (Ciri)",
+    "role": "Księżniczka Cintry, Dziecko Niespodzianka",
+    "description": "Jedyna spadkobierczyni Cintry, Posiadaczka Starszej Krwi (Ghen Lara)."
+  },
+  {
+    "id": "yennefer",
+    "name": "Yennefer z Vengerbergu",
+    "role": "Czarodziejka",
+    "description": "Mistrzyni magii, członkini dawnej Rady Czarodziejów, przybrana matka Ciri."
+  },
+  {
+    "id": "triss",
+    "name": "Triss Merigold",
+    "role": "Czarodziejka",
+    "description": "Czarodziejka z Mariboru, przyjaźniąca się z Geraltem i Yennefer, członkini Loży."
+  }
+]
