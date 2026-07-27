@@ -1,0 +1,401 @@
+[
+  {
+    "id": "droga-z-ktorej-sie-nie-wraca",
+    "year": 1220,
+    "month": "Wiosna",
+    "book": "Coś się kończy, coś się zaczyna (Opowiadanie)",
+    "chapter": "Droga, z której się nie wraca",
+    "title": "Spotkanie Visenny i Korina",
+    "type": "side",
+    "location_id": "mayena",
+    "location_name": "Klucz Mayen / Przełęcz",
+    "description": "Czarodziejka Visenna spotyka rranionego wojownika Korina. Razem stawiają czoła kościejowi stwarzanemu przez renegata Fregala.",
+    "tracker": {
+      "geralt": "Jeszcze się nie urodził (urodzi się ok. 1225-1230 r.).",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Aretuza / Vengerberg – odbywa naukę lub stawia pierwsze kroki w magii.",
+      "triss": "Jeszcze się nie urodziła."
+    },
+    "other_characters": ["Visenna", "Korin", "Fregal", "Kessel"]
+  },
+  {
+    "id": "rozdroze-krukow",
+    "year": 1230,
+    "month": "Lato",
+    "book": "Rozdroże kruków",
+    "chapter": "Całość",
+    "title": "Pierwsze kroki Geralta na wiedźmińskim szlaku",
+    "type": "main",
+    "location_id": "pogranicze-kaedwen",
+    "location_name": "Pogranicze Kaedwen i Redanii",
+    "description": "Młody Geralt tuż po opuszczeniu Siedliszcza w Kaer Morhen wyrusza na swój pierwszy prawdziwy szlak wiedźmiński, zderzając się z brutalną rzeczywistością i intrygami ludzkiego świata.",
+    "tracker": {
+      "geralt": "Trakt / Pogranicze Kaedwen – zdobywa pierwsze doświadczenia jako wiedźmin.",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Dwory Królewskie / Vengerberg – praktykuje magię i umacnia pozycję polityczną.",
+      "triss": "Aretuza – uczenie się kunsztu czarodziejskiego."
+    },
+    "other_characters": ["Vesemir", "Rozmaici zleczeniodawcy i renegaci"]
+  },
+  {
+    "id": "ziarno-prawdy",
+    "year": 1240,
+    "month": "Jesień",
+    "book": "Ostatnie życzenie",
+    "chapter": "Ziarno prawdy",
+    "title": "Spotkanie z Nivellenem",
+    "type": "side",
+    "location_id": "redania-prowincja",
+    "location_name": "Górzyste ustronie w Redanii",
+    "description": "Geralt trafia do zakętego dworu potwornego Nivellena i walczy z mściwą bruxą Vereeną.",
+    "tracker": {
+      "geralt": "Dwór Nivellena – zdejmuje klątwę z Nivellena i zabija Vereenę.",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Vengerberg – prowadzi praktykę magiczną.",
+      "triss": "Aretuza / Maribor – kończy edukację magiczną."
+    },
+    "other_characters": ["Nivellen", "Vereena"]
+  },
+  {
+    "id": "mniejsze-zlo",
+    "year": 1243,
+    "month": "Lato",
+    "book": "Ostatnie życzenie",
+    "chapter": "Mniejsze zło",
+    "title": "Rzeź w Blaviken",
+    "type": "main",
+    "location_id": "blaviken",
+    "location_name": "Blaviken (Arcydzieło / Redania)",
+    "description": "Konflikt między czarodziejem Stregoborem a Renfri (ofiarą Przekleństwa Czarnego Słońca). Geralt dokonuje tragicznego wyboru na rynku w Blaviken, zyskując przydomek 'Rzeźnik z Blaviken'.",
+    "tracker": {
+      "geralt": "Blaviken – zabija bandę Renfri oraz samą Renfri, po czym zostaje wygnany z miasta.",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Vengerberg – brak kontaktu z wiedźminem.",
+      "triss": "Maribor / Dwory Północy."
+    },
+    "other_characters": ["Renfri", "Stregobor", "Wójt Caldemeyn"]
+  },
+  {
+    "id": "sezon-burz",
+    "year": 1245,
+    "month": "Lato",
+    "book": "Sezon burz",
+    "chapter": "Całość",
+    "title": "Afera w Kerack i utrata mieczy",
+    "type": "main",
+    "location_id": "kerack",
+    "location_name": "Królestwo Kerack",
+    "description": "Geralt traci swoje wiedźmińskie miecze, zostaje wplątany w spisek na dworze króla Belohuna oraz w romans z czarodziejką Lyttą Neyd (Koral).",
+    "tracker": {
+      "geralt": "Kerack i okolice – poszukuje skradzionych mieczy wiedźmińskich.",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Vengerberg – obserwuje z ukrycia poczynania Geralta i dyskretnie go wspomaga.",
+      "triss": "Maribor / Dwory królów Północy."
+    },
+    "other_characters": ["Jaskier", "Lytta Neyd (Koral)", "Koral / Pinety", "Mozaik"]
+  },
+  {
+    "id": "ostatnie-zyczenie-spotkanie",
+    "year": 1248,
+    "month": "Wiosna",
+    "book": "Ostatnie życzenie",
+    "chapter": "Ostatnie życzenie",
+    "title": "Pierwsze spotkanie Geralta i Yennefer",
+    "type": "main",
+    "location_id": "rinda",
+    "location_name": "Rinda",
+    "description": "Jaskier zostaje ranny przez Dżina. Geralt szuka pomocy u czarodziejki Yennefer z Vengerbergu w Rindzie, co prowadzi do ich pierwszego powiązania przeznaczeniem.",
+    "tracker": {
+      "geralt": "Rinda – wypowiada ostatnie życzenie do Dżina, wiążąc swój los z Yennefer.",
+      "ciri": "Jeszcze się nie urodziła.",
+      "yennefer": "Rinda – próbuje posiąść moc Dżina, po czym ulega urokowi życzenia Geralta.",
+      "triss": "Temeria / Maribor."
+    },
+    "other_characters": ["Jaskier", "Chireadan"]
+  },
+  {
+    "id": "kwestia-ceny",
+    "year": 1251,
+    "month": "Jesień",
+    "book": "Ostatnie życzenie",
+    "chapter": "Kwestia ceny",
+    "title": "Zaręczyny Pavetty i Prawo Niespodzianki",
+    "type": "main",
+    "location_id": "cintra-zamek",
+    "location_name": "Cintra (Zamek Królewski)",
+    "description": "Geralt uczestniczy w uczcie wydanej przez królową Calanthe. Odczarowuje Jeża z Erlenwaldu (Duny'ego) i odwołuje się do Prawa Niespodzianki wobec brzemiennej Pavetty.",
+    "tracker": {
+      "geralt": "Cintra – żąda Prawa Niespodzianki od Duny'ego i Pavetty.",
+      "ciri": "Nienarodzona (Pavetta nosi ją w łonie).",
+      "yennefer": "Vengerberg / Podróże.",
+      "triss": "Dwory Północne."
+    },
+    "other_characters": ["Calanthe", "Duny (Emhyr)", "Pavetta", "Mousesack (Myszowór)"]
+  },
+  {
+    "id": "narodziny-ciri",
+    "year": 1252,
+    "month": "Maja",
+    "book": "Krew elfów (Retrospekcja)",
+    "chapter": "Tło historyczne",
+    "title": "Narodziny Ciri",
+    "type": "side",
+    "location_id": "cintra",
+    "location_name": "Cintra",
+    "description": "Na świat przychodzi Cirilla Fiona Elen Riannon, księżniczka Cintry.",
+    "tracker": {
+      "geralt": "Wiedźmiński Szlak.",
+      "ciri": "Cintra – narodziny.",
+      "yennefer": "Vengerberg.",
+      "triss": "Temeria."
+    },
+    "other_characters": ["Calanthe", "Pavetta", "Duny"]
+  },
+  {
+    "id": "miecz-przeznaczenia-brokilon",
+    "year": 1262,
+    "month": "Lato",
+    "book": "Miecz przeznaczenia",
+    "chapter": "Miecz przeznaczenia",
+    "title": "Pierwsze spotkanie Geralta i Ciri w Brokilonie",
+    "type": "main",
+    "location_id": "brokilon",
+    "location_name": "Las Brokilon",
+    "description": "Dziesięcioletnia Ciri ucieka przed niechcianym małżeństwem i trafia do zakazanego lasu Brokilon. Geralt ratuje ją przed potworami i poznaje jej tożsamość.",
+    "tracker": {
+      "geralt": "Brokilon – odnajduje Ciri i odmawia pozostawienia jej driadom, ale ponownie ją porzuca w Cintrze.",
+      "ciri": "Brokilon – po raz pierwszy spotyka swojego 'wiedźmina z przeznaczenia'.",
+      "yennefer": "Vengerberg / Aretuza.",
+      "triss": "Dwór Foltesta w Wyzimie."
+    },
+    "other_characters": ["Eithné", "Freixenet", "Braenn"]
+  },
+  {
+    "id": "rzeź-cintry",
+    "year": 1263,
+    "month": "Wrzesień",
+    "book": "Coś więcej / Krew elfów",
+    "chapter": "Retrospekcja / Rozdział 1",
+    "title": "I Wojna z Nilfgaardem i Upadek Cintry",
+    "type": "main",
+    "location_id": "cintra",
+    "location_name": "Cintra",
+    "description": "Wojska Nilfgaardu najeżdżają Cintrę. Królowa Calanthe popełnia samobójstwo. Ciri ucieka z płonącego miasta dzięki Cahirowi, po czym ukrywa się u wieśniaków w Zazdrości.",
+    "tracker": {
+      "geralt": "Zadunajskie krainy – szuka Ciri, przekonany, że zginęła w rzezi.",
+      "ciri": "Cintra -> Zaorze – ucieczka z płonącego miasta przed 'Rycerzem w hełmie z piórami czarnego ptaka'.",
+      "yennefer": "Wzgórze Sodden – bierze udział w wielkiej bitwie czarodziejów z Nilfgaardem, gubiąc wzrok.",
+      "triss": "Wzgórze Sodden – odnosi ciężkie rany (znana odtąd jako Czternasta ze Sodden)."
+    },
+    "other_characters": ["Calanthe", "Cahir aep Ceallach", "Myszowór", "Vilgefortz"]
+  },
+  {
+    "id": "cos-wiecej-odnalezienie",
+    "year": 1264,
+    "month": "Wiosna",
+    "book": "Miecz przeznaczenia",
+    "chapter": "Coś więcej",
+    "title": "Odnalezienie Ciri u kupca Yurgi",
+    "type": "main",
+    "location_id": "zaorze",
+    "location_name": "Chata Yurgi nad Yarugą",
+    "description": "Ciężko ranny Geralt zostaje uratowany przez kupca Yurgę. W zamian za ratunek żąda Prawa Niespodzianki i odnajduje w jego chatce ocalałą Ciri.",
+    "tracker": {
+      "geralt": "Chata Yurgi – odnajduje Ciri i decyduje, że nigdy więcej jej nie opuści.",
+      "ciri": "Chata Yurgi – rzuca się w objęcia Geralta po miesiącach tułaczki.",
+      "yennefer": "Leczy rany po Bitwie o Sodden.",
+      "triss": "Leczy oparzenia po Sodden."
+    },
+    "other_characters": ["Yurga", "Zlotolitka", "Visenna"]
+  },
+  {
+    "id": "kaer-morhen-szkolenie",
+    "year": 1264,
+    "month": "Zima",
+    "book": "Krew elfów",
+    "chapter": "Rozdział 2-3",
+    "title": "Pobyt Ciri w Kaer Morhen i przyjazd Triss",
+    "type": "main",
+    "location_id": "kaer-morhen",
+    "location_name": "Siedliszcze Wiedźminów Kaer Morhen",
+    "description": "Geralt szkoli Ciri na wiedźminkę. Wzywają Triss Merigold, aby pomogła zrozumieć transy i niekontrolowane wybuchy mocy Ciri.",
+    "tracker": {
+      "geralt": "Kaer Morhen – uczy Ciri szermierki i wiedźmińskiego fachu.",
+      "ciri": "Kaer Morhen – pokonuje 'Grzebień', uczy się walki mieczem.",
+      "yennefer": "Vengerberg – na razie brak kontaktu z wiedźminami.",
+      "triss": "Kaer Morhen – przybywa na leczenie Ciri, zakochana bez wzajemności w Geralcie."
+    },
+    "other_characters": ["Vesemir", "Eskel", "Lambert", "Coën"]
+  },
+  {
+    "id": "swiatynia-melitele-ellander",
+    "year": 1265,
+    "month": "Wiosna",
+    "book": "Krew elfów",
+    "chapter": "Rozdział 6-7",
+    "title": "Naukowa i magiczna edukacja Ciri",
+    "type": "main",
+    "location_id": "ellander",
+    "location_name": "Świątynia Melitele w Ellander",
+    "description": "Ciri zostaje oddana pod opiekę Nenneke. Yennefer przybywa do świątyni, by uczyć Ciri panowania nad mocą Starszej Krwi.",
+    "tracker": {
+      "geralt": "Oxenfurt / Temeria – szuka Rience'a przy pomocy Jaskra, Shani i Philippy Eilhart.",
+      "ciri": "Świątynia Melitele – uczy się magii od Yennefer i historii u Nenneke.",
+      "yennefer": "Ellander – tworzy głęboką relację matczyną z Ciri.",
+      "triss": "Wyzima – pracuje jako doradczyni króla Foltesta."
+    },
+    "other_characters": ["Nenneke", "Jaskier", "Shani", "Rience", "Philippa Eilhart"]
+  },
+  {
+    "id": "zjazd-w-aretuzie-thanedd",
+    "year": 1267,
+    "month": "Lipiec",
+    "book": "Czas pogardy",
+    "chapter": "Rozdział 3-4",
+    "title": "Zjazd Czarodziejów i Pucz na Thanedd",
+    "type": "main",
+    "location_id": "thanedd",
+    "location_name": "Wyspa Thanedd / Aretuza",
+    "description": "Krwawy przewrót polityczny na wyspie Thanedd. Vilgefortz i Fransesca Findabair ujawniają współpracę z Nilfgaardem. Wybucha II Wojna z Nilfgaardem.",
+    "tracker": {
+      "geralt": "Thanedd – zostaje połamany w pojedynku z Vilgefortzem.",
+      "ciri": "Thanedd – ucieka przez uszkodzony portal w Tor Lara na Pustynię Korath.",
+      "yennefer": "Thanedd – skompresowana przez Fransescę w nefrytowy posążek.",
+      "triss": "Thanedd – teleportuje rranionego Geralta do lasu Brokilon."
+    },
+    "other_characters": ["Vilgefortz", "Fransesca Findabair", "Tissaia de Vries", "Dijkstra", "Cahir"]
+  },
+  {
+    "id": "korath-i-szczury",
+    "year": 1267,
+    "month": "Sierpień",
+    "book": "Czas pogardy / Chrzest ognia",
+    "chapter": "Rozdział 5-7",
+    "title": "Pustynia Korath i dołączenie do Szczurów",
+    "type": "main",
+    "location_id": "korath-nilfgaard",
+    "location_name": "Pustynia Korath / Prowincja Geso",
+    "description": "Ciri samotnie przemierza patelnię Korath, ratując jednorożca (Ihuarraquaxa). Trafia do Nilfgaardu i dołącza do młodocianej bandy Szczurów jako Falka.",
+    "tracker": {
+      "geralt": "Brokilon – leczy rany odniesione na Thanedd pod opieką driad.",
+      "ciri": "Prowincja Geso – rabuje i zabija razem z bandą Szczurów, wchodzi w relację z Mistle.",
+      "yennefer": "Nadal w nefrytowym posążku u Fransesci Findabair.",
+      "triss": "Montecalvo – bierze udział w tworzeniu tajnej Loży Czarodziejek."
+    },
+    "other_characters": ["Ihuarraquax (Jednorożec)", "Mistle", "Giselher", "Kayleigh", "Iskra"]
+  },
+  {
+    "id": "formowanie-kompanii",
+    "year": 1267,
+    "month": "Wrzesień",
+    "book": "Chrzest ognia",
+    "chapter": "Rozdział 1-4",
+    "title": "Wymarsz Kompanii Geralta na Południe",
+    "type": "main",
+    "location_id": "yaruga-prowincja",
+    "location_name": "Brzegi Yarugi / Angren",
+    "description": "Geralt wyrusza z Brokilonu szukać Ciri. Dołączają do niego Jaskier, Milva, wampir wyższy Emiel Regis oraz spętany przeznaczeniem Cahir.",
+    "tracker": {
+      "geralt": "Marsz przez Angren – prowadzi drużynę na południe.",
+      "ciri": "Geso – terroryzuje kupców z bandą Szczurów.",
+      "yennefer": "Montecalvo – odkompresowana z posążka, ucieka z Loży Czarodziejek na Skellige.",
+      "triss": "Montecalvo – zasiada w Loży Czarodziejek obok Philippy Eilhart."
+    },
+    "other_characters": ["Jaskier", "Milva", "Emiel Regis", "Cahir", "Zoltan Chivay"]
+  },
+  {
+    "id": "masakra-w-jealousy",
+    "year": 1267,
+    "month": "Październik",
+    "book": "Wieża Jaskółki",
+    "chapter": "Rozdział 2-3",
+    "title": "Leo Bonhart wyrzyna Szczury",
+    "type": "main",
+    "location_id": "jealousy",
+    "location_name": "Miasteczko Jealousy (Zazdrość)",
+    "description": "Okrutny łowca nagród Leo Bonhart morduje na oczach Ciri całą bandę Szczurów, ścina im głowy, a Ciri więzi i zmusza do walk na arenie w Claremont.",
+    "tracker": {
+      "geralt": "Angren / Meve z Rivii – walczy w Bitwie o Most na Yarudze, otrzymuje tytuł 'z Rivi' od królowej Meve.",
+      "ciri": "Claremont / Jealousy – w niewoli u Leo Bonharta.",
+      "yennefer": "Skellige – szuka informacji o głębi Sedny i porywaczach Ciri.",
+      "triss": "Kovir / Montecalvo – misje dyplomatyczne dla Loży."
+    },
+    "other_characters": ["Leo Bonhart", "Stefan Skellen (Puszczyk)", "Królowa Meve"]
+  },
+  {
+    "id": "tor-zirael-ucieczka",
+    "year": 1267,
+    "month": "Listopad",
+    "book": "Wieża Jaskółki",
+    "chapter": "Rozdział 9-10",
+    "title": "Chata Wysockiego i Przejście do Świata Aen Elle",
+    "type": "main",
+    "location_id": "tor-zirael",
+    "location_name": "Jezioro Tarn Mira / Tor Zirael (Wieża Jaskółki)",
+    "description": "Ciri leczy rany rąbanej twarzy u starca Wysockiego. Zmasakrowawszy na łyżwach pościg Skellena na zamarzniętym jeziorze, wchodzi do portalu w Wieży Jaskółki.",
+    "tracker": {
+      "geralt": "Toussaint – spędza zimę w Księstwie Beauclair, romansując z Fringillą Vigo.",
+      "ciri": "Tir ná Lia – trafia do świata Elfów Aen Elle, gdzie Król Auberon i Eredin chcą wymusić od niej potomka.",
+      "yennefer": "Zamek Stygga – schwytana i torturowana przez Vilgefortza.",
+      "triss": "Montecalvo – próbuje namierzyć lokalizację Yennefer."
+    },
+    "other_characters": ["Pustelnik Wysocki", "Eredin Bróacc Glas", "Auberon Muircetach", "Avallac'h", "Fringilla Vigo"]
+  },
+  {
+    "id": "bitwa-o-stygga",
+    "year": 1268,
+    "month": "Marzec",
+    "book": "Pani Jeziora",
+    "chapter": "Rozdział 8-9",
+    "title": "Szturm na Zamek Stygga",
+    "type": "main",
+    "location_id": "zamek-stygga",
+    "location_name": "Zamek Stygga (Kryjówka Vilgefortza)",
+    "description": "Kompania Geralta dociera do zamku Stygga, by odbić Yennefer i Ciri. W krwawej walce giną Milva, Cahir, Angoulême oraz Regis. Geralt zabija Vilgefortza, a Ciri pokonuje Bonharta.",
+    "tracker": {
+      "geralt": "Zamek Stygga – uśmierca Vilgefortza z pomocą medalionu od Fringilli.",
+      "ciri": "Zamek Stygga – zabija Leo Bonharta, odzyskuje wolność.",
+      "yennefer": "Zamek Stygga – uwolniona z katowni przez Geralta i Ciri.",
+      "triss": "Montecalvo – oczekuje na decyzje Loży co do losów Ciri."
+    },
+    "other_characters": ["Vilgefortz", "Leo Bonhart", "Regis", "Cahir", "Milva", "Angoulême", "Emhyr var Emreis"]
+  },
+  {
+    "id": "bitwa-pod-starymi-pupkami",
+    "year": 1268,
+    "month": "Marzec",
+    "book": "Pani Jeziora",
+    "chapter": "Rozdział 8",
+    "title": "Bitwa pod Brenną",
+    "type": "main",
+    "location_id": "brenna",
+    "location_name": "Pole bitwy pod Brenną",
+    "description": "Ostateczne, decydujące starcie II Wojny z Nilfgaardem. Wojska Koalicji Północnej pod wodzą Johna Natalisa rozbijają armię środkową Nilfgaardu dowodzoną przez Menno Coehoorna.",
+    "tracker": {
+      "geralt": "Zamek Stygga – walczy o życie Yennefer i Ciri.",
+      "ciri": "Zamek Stygga.",
+      "yennefer": "Zamek Stygga.",
+      "triss": "Montecalvo / Obóz medyczny Shani."
+    },
+    "other_characters": ["John Natalis", "Menno Coehoorn", "Shani", "Jarre", "Biała Rayla"]
+  },
+  {
+    "id": "pogrom-w-rivii",
+    "year": 1268,
+    "month": "Czerwiec",
+    "book": "Pani Jeziora",
+    "chapter": "Rozdział 12",
+    "title": "Pogrom w Rivii i Odejście Ciri",
+    "type": "main",
+    "location_id": "rivia",
+    "location_name": "Rivia / Wyspa Jabłoni (Inny Świat)",
+    "description": "Podczas rasowego pogromu w Rivii Geralt zostaje pchnięty widłami przez chłopa zwanego Rob. Yennefer traci przytomność z wyczerpania, ratując go magią. Ciri przenosi ich łodzią do innego wymiaru.",
+    "tracker": {
+      "geralt": "Rivia -> Wyspa Jabłoni – po śmiertelnym zranieniu trafia z Yennefer do mitycznej krainy.",
+      "ciri": "Świat Króla Artura – odchodzi z uniwersum po odprowadzeniu rodziców na Wyspę Jabłoni.",
+      "yennefer": "Rivia -> Wyspa Jabłoni – odpływa wraz z Geraltem.",
+      "triss": "Rivia – sprowadza potężną burzę ('Gradobicie Merigold') wraz z Yennefer, by powstrzymać oprawców."
+    },
+    "other_characters": ["Jaskier", "Zoltan Chivay", "Yarpen Zigrin", "Galahad"]
+  }
+]
