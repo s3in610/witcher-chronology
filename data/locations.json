@@ -1,0 +1,14 @@
+[
+  {
+    "id": "thanedd",
+    "name": "Wyspa Thanedd",
+    "region": "Redania / Temeria",
+    "description": "Siedziba szkoły czarodziejek w Aretuzie oraz Wieży Mewy (Tor Lara)."
+  },
+  {
+    "id": "brokilon",
+    "name": "Las Brokilon",
+    "region": "Pogranicze Verden i Brugge",
+    "description": "Ostatni bastion driad pod władzą pani Eithné, niedostępny dla ludzi."
+  }
+]
