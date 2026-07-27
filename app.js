@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Elementy DOM
     const searchInput = document.getElementById('search-input');
+    const filterBook = document.getElementById('filter-book');
     const filterCharacter = document.getElementById('filter-character');
     const filterLocation = document.getElementById('filter-location');
     const filterYear = document.getElementById('filter-year');
@@ -31,13 +32,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="grid-column: 1/-1; background-color: #331111; color: #ff9999; padding: 1.5rem; border-radius: 8px; border: 1px solid #ff4444;">
                     <h3>Nie udało się załadować bazy danych</h3>
                     <p><strong>Szczegóły błędu:</strong> ${err.message}</p>
-                    <p><em>Wskazówka: Jeśli otwierasz plik bezpośrednio z dysku (file:///...), przeglądarka blokuje wczytywanie plików JSON ze względów bezpieczeństwa. Użyj lokalnego serwera (np. wtyczki <strong>Live Server</strong> w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
+                    <p><em>Wskazówka: Jeśli otwierasz plik bezpośrednio z dysku (file:///...), przeglądarka blokuje wczytywanie plików JSON ze względów bezpieczeństwa. Użyj lokalnego serwera (np. wtyczki Live Server w VS Code) lub uruchom stronę na GitHub Pages.</em></p>
                 </div>
             `;
         });
 
-    // Inicjalizacja opcji w filtrach na podstawie danych z JSON
+    // Inicjalizacja opcji we wszystkich filtrach na podstawie danych z JSON
     function initFilters(events) {
+        const booksSet = new Set();
         const charactersSet = new Set();
         const locationsSet = new Set();
         const yearsSet = new Set();
@@ -46,11 +48,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ['Geralt', 'Ciri', 'Yennefer', 'Triss'].forEach(c => charactersSet.add(c));
 
         events.forEach(item => {
+            if (item.book) booksSet.add(item.book);
             if (item.year) yearsSet.add(item.year);
             if (item.location_name) locationsSet.add(item.location_name);
             if (item.other_characters && Array.isArray(item.other_characters)) {
                 item.other_characters.forEach(c => charactersSet.add(c));
             }
+        });
+
+        // Wypełnienie listy książek/opowiadań
+        Array.from(booksSet).sort().forEach(book => {
+            const opt = document.createElement('option');
+            opt.value = book;
+            opt.textContent = book;
+            filterBook.appendChild(opt);
         });
 
         // Wypełnienie listy postaci
@@ -81,12 +92,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Główna funkcja filtrowania
     function filterEvents() {
         const query = searchInput.value.toLowerCase().trim();
+        const selectedBook = filterBook.value;
         const selectedChar = filterCharacter.value;
         const selectedLoc = filterLocation.value;
         const selectedYear = filterYear.value;
 
         const filtered = eventsData.filter(event => {
-            // Bezpieczne sprawdzanie pól tekstowych (zabezpieczenie przed undefined/null)
+            // Szukanie frazy w tekście
             const titleMatch = event.title ? event.title.toLowerCase().includes(query) : false;
             const descMatch = event.description ? event.description.toLowerCase().includes(query) : false;
             const bookMatch = event.book ? event.book.toLowerCase().includes(query) : false;
@@ -102,19 +114,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const textMatch = !query || titleMatch || descMatch || bookMatch || locNameMatch || otherCharsMatch || trackerMatch;
 
+            // Filtr książki/opowiadania
+            const bookFilterMatch = !selectedBook || event.book === selectedBook;
+
             // Filtr postaci
             let charMatch = !selectedChar;
             if (selectedChar) {
                 const charLower = selectedChar.toLowerCase();
                 const inOthers = event.other_characters && event.other_characters.includes(selectedChar);
                 
-                // Sprawdzanie czy postać występuje w trackerze
                 let inTracker = false;
                 if (event.tracker) {
                     if (event.tracker[charLower]) {
                         inTracker = !event.tracker[charLower].includes("Jeszcze się nie urodził");
                     } else {
-                        // Jeśli szukamy w opisie trakerów innych postaci
                         inTracker = Object.values(event.tracker).some(t => typeof t === 'string' && t.toLowerCase().includes(charLower));
                     }
                 }
@@ -128,7 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Filtr roku
             const yearMatch = !selectedYear || (event.year && event.year.toString() === selectedYear);
 
-            return textMatch && charMatch && locMatch && yearMatch;
+            return textMatch && bookFilterMatch && charMatch && locMatch && yearMatch;
         });
 
         renderResults(filtered);
@@ -152,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 ? (event.description.length > 110 ? event.description.substring(0, 110) + '...' : event.description)
                 : '';
 
+            const chapterInfo = event.chapter ? ` (${event.chapter})` : '';
+
             card.innerHTML = `
                 <div>
                     <div class="result-header">
@@ -159,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <span class="badge secondary">${event.book || ''}</span>
                     </div>
                     <h3>${event.title || 'Bez tytułu'}</h3>
+                    <p class="result-loc">📖 <strong>${event.book || ''}</strong>${chapterInfo}</p>
                     <p class="result-loc">📍 <strong>${event.location_name || 'Różne lokacje'}</strong></p>
                     <p class="result-snippet">${descSnippet}</p>
                 </div>
@@ -205,6 +221,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listenery dla wyszukiwania
     searchInput.addEventListener('input', filterEvents);
+    filterBook.addEventListener('change', filterEvents);
     filterCharacter.addEventListener('change', filterEvents);
     filterLocation.addEventListener('change', filterEvents);
     filterYear.addEventListener('change', filterEvents);
