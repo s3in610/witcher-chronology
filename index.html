@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Przewodnik po Literaturze Sapkowskiego - Chronologia i GPS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Nawigator po Świecie Wiedźmina</h1>
+        <p>Interaktywna oś czasu, wydarzenia i lokalizacje bohaterów w powieściach A. Sapkowskiego</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <label for="event-select">Wybież wydarzenie / punkt w czasie:</label>
+            <select id="event-select">
+                <option value="">-- Wybierz wydarzenie --</option>
+            </select>
+        </section>
+
+        <section id="event-details" class="card hidden">
+            <h2 id="event-title"></h2>
+            <div class="meta-info">
+                <span id="event-date" class="badge"></span>
+                <span id="event-book" class="badge secondary"></span>
+                <span id="event-location" class="badge outline"></span>
+            </div>
+            <p id="event-description"></p>
+
+            <h3>Gdzie aktualnie przebywają bohaterowie?</h3>
+            <div class="tracker-grid">
+                <div class="tracker-card">
+                    <h4>Geralt</h4>
+                    <p id="pos-geralt">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Ciri</h4>
+                    <p id="pos-ciri">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Yennefer</h4>
+                    <p id="pos-yennefer">-</p>
+                </div>
+                <div class="tracker-card">
+                    <h4>Triss</h4>
+                    <p id="pos-triss">-</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Projekt open-source przygotowany do publikacji na GitHub Pages.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
